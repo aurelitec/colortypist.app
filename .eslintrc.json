@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:all",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "func-style": "off",
+        "linebreak-style": ["error", "windows"],
+        "max-len": ["error", 120],
+        "multiline-ternary": ["error", "always-multiline"],
+        "no-extra-parens": ["error", "all", { "nestedBinaryExpressions": false }],
+        "no-ternary": "off",
+        "object-curly-spacing": "off",
+        "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+        "one-var": "off",
+        "padded-blocks": "off",
+        "quote-props": ["error", "as-needed"],
+        "sort-keys": "off",
+        "space-before-function-paren": "off",
+        "wrap-regex": "off"
+    }
+}
