@@ -1,3 +1,12 @@
+/*
+ *  Colortypist. Copyright (c) 2011-2018 Aurelitec. MIT License.
+ *  https://colortypist.app
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -7,8 +16,10 @@ html, body {
 }
 
 body {
-    color: #000000;
     background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
     font-weight: 400;
@@ -22,34 +33,15 @@ input {
     line-height: inherit;
 }
 
-.main {
-    box-sizing: border-box;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.typist-input {
-    font-size: 2rem;
-    background: transparent;
-    color: inherit;
-    border: none;
-    border-bottom: 1px solid;
-    text-align: center;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    max-width: 30rem;
-    width: 80%;
-}
-
-.typist-input:focus {
-    outline: none;
-}
-
-.body--light {
-    color: #ffffff;
-}
+/* ==========================================================================
+   Body
+   ========================================================================== */
 
 .checkered {
     /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), white; */
@@ -64,4 +56,60 @@ input {
     text-shadow: none;
     transition: none;
     transform: scaleX(1) scaleY(1) scaleZ(1);
+}
+
+.body--light {
+    color: #fff;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.ct-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+@media (max-width: 599px) {
+    .ct-toolbar {
+        padding: 0.25rem;
+    }
+}
+
+.ct-toolbar__item {
+    cursor: pointer;
+    padding: 0.75rem;
+}
+
+.ct-toolbar__item .material-icons {
+    display: block;
+}
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.typist-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    color: inherit;
+    font-size: 2rem;
+    max-width: 30rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 80%;
+}
+
+.typist-input:focus {
+    outline: none;
 }
