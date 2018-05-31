@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colortypist</title>
 
+    <link rel="manifest" href="/manifest.webmanifest">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles/normalize.min.css">
     <link rel="stylesheet" href="/styles/app.css">
 
-    <meta name="theme-color" content="#FF0000">
+    <meta name="theme-color" content="#FFFFFF">
 </head>
 
 <body class="checkered">
@@ -34,6 +36,15 @@
     </main>
 
     <script type="module" src="/scripts/app.js"></script>
+
+    <script>
+        // Register service worker
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/sw.js");
+            });
+        }
+    </script>
 </body>
 
 </html>

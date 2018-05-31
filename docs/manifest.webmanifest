@@ -1,0 +1,17 @@
+{
+    "short_name": "Colortypist",
+    "name": "Colortypist",
+    "description": "",
+    "scope": "/",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
+    "start_url": "/?utm_source=pwa",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./images/manifest/colortypist-app-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
